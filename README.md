@@ -1,354 +1,354 @@
-# Полная шпаргалка по HTML
+# Повна шпаргалка по HTML
 
-## Содержание
-1. [Введение в HTML](#введение-в-html)
+## Зміст
+1. [Введення в HTML](#введення-в-html)
 2. [Структура HTML-документа](#структура-html-документа)
-3. [Элементы и теги HTML](#элементы-и-теги-html)
-4. [Атрибуты HTML](#атрибуты-html)
-5. [Текстовые элементы](#текстовые-элементы)
+3. [Елементи та теги HTML](#елементи-і-теги-html)
+4. [Атрибути HTML](#атрибути-html)
+5. [Текстові елементи](#текстові-елементи)
 6. [Списки](#списки)
-7. [Ссылки](#ссылки)
-8. [Изображения](#изображения)
-9. [Таблицы](#таблицы)
-10. [Формы](#формы)
-11. [Семантические элементы HTML5](#семантические-элементы-html5)
-12. [Мультимедиа](#мультимедиа)
-13. [Метаданные](#метаданные)
+7. [Посилання](#посилання)
+8. [Зображення](#зображення)
+9. [Таблиці](#таблиці)
+10. [Форми](#форми)
+11. [Семантичні елементи HTML5](#семантичні-елементи-html5)
+12. [Мультимедіа](#мультимедіа)
+13. [Метадані](#метадані)
 14. [API HTML5](#api-html5)
-15. [Валидация и доступность](#валидация-и-доступность)
+15. [Волідація та доступність](#валідація-і-доступність)
 
-## Введение в HTML
+## Введення в HTML
 
-HTML (HyperText Markup Language) — это стандартизированный язык разметки для создания веб-страниц. Текущая версия — HTML5.
+HTML (HyperText Markup Language) – це стандартизована мова розмітки для створення веб-сторінок. Поточна версія - HTML5.
 
-**Основные характеристики:**
-- Описывает структуру веб-страницы
-- Состоит из элементов, обозначенных тегами
-- Интерпретируется браузерами для отображения содержимого
-- Работает вместе с CSS (для стилей) и JavaScript (для интерактивности)
+**Основні характеристики:**
+- описує структуру веб-сторінки
+- Складається з елементів, що позначені тегами
+- Інтерпретується браузерами для відображення вмісту
+- Працює разом з CSS (для стилів) та JavaScript (для інтерактивності)
 
 ## Структура HTML-документа
 
-Базовая структура HTML-документа:
+Базова структура HTML-документу:
 
 ```html
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название страницы</title>
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Назва сторінки</title>
 </head>
-<body>
-    <!-- Содержимое страницы -->
+<body> 
+<!-- Вміст сторінки -->
 </body>
 </html>
-```
+````
 
-**Объяснение:**
-- `<!DOCTYPE html>` — объявление типа документа для HTML5
-- `<html>` — корневой элемент страницы
-- `<head>` — содержит метаданные, ссылки на стили и скрипты
-- `<meta charset="UTF-8">` — указывает кодировку документа
-- `<meta name="viewport">` — настраивает отображение на мобильных устройствах
-- `<title>` — заголовок страницы (отображается в заголовке вкладки браузера)
-- `<body>` — содержит видимое содержимое страницы
-- `<!-- -->` — комментарий (не отображается на странице)
+**Пояснення:**
+- `<!DOCTYPE html>` - оголошення типу документа для HTML5
+- `<html>` - кореневий елемент сторінки
+- `<head>` - містить метадані, посилання на стилі та скрипти
+- `<meta charset="UTF-8">` ​​- вказує кодування документа
+- `<meta name="viewport">` - налаштовує відображення на мобільних пристроях
+- `<title>` - заголовок сторінки (відображається в заголовку вкладки браузера)
+- `<body>` - містить видимий вміст сторінки
+- `<!-- -->` — коментар (не відображається на сторінці)
 
-## Элементы и теги HTML
+## Елементи та теги HTML
 
-HTML-элементы обозначаются тегами, которые заключаются в угловые скобки.
+HTML-елементи позначаються тегами, які полягають у кутові дужки.
 
-**Типы тегов:**
-1. **Парные теги**: имеют открывающий и закрывающий теги
-   ```html
-   <h1>Заголовок</h1>
-   ```
+**Типи тегів:**
+1. **Парні теги**: мають теги, що відкривають і закривають 
+```html 
+<h1>Заголовок</h1> 
+````
 
-2. **Одиночные теги**: не имеют закрывающего тега
-   ```html
-   <img src="image.jpg">
-   <!-- В HTML5 можно также использовать: -->
-   <img src="image.jpg" />
-   ```
+2. **Одиночні теги**: не мають тега, що закриває 
+```html 
+<img src="image.jpg"> 
+<!-- У HTML5 можна також використовувати: --> 
+<img src="image.jpg" /> 
+````
 
-**Вложенность элементов:**
+**Вкладеність елементів:**
 ```html
-<div>
-    <p>Текст внутри параграфа, который находится внутри div</p>
+<div> 
+<p>Текст всередині параграфа, який знаходиться всередині div</p>
 </div>
-```
+````
 
-## Атрибуты HTML
+## Атрибути HTML
 
-Атрибуты предоставляют дополнительную информацию об элементах.
+Атрибути надають додаткову інформацію щодо елементів.
 
 **Синтаксис:**
 ```html
-<тег атрибут="значение">Содержимое</тег>
-```
+<тег атрибут="значення">Вміст</тег>
+````
 
-**Общие атрибуты:**
-- `id` — уникальный идентификатор элемента
-- `class` — определяет класс для CSS
-- `style` — добавляет встроенные стили
-- `title` — всплывающая подсказка
-- `data-*` — пользовательские атрибуты для хранения данных
+**Загальні атрибути:**
+- `id` - унікальний ідентифікатор елемента
+- `class` - визначає клас для CSS
+- `style` - додає вбудовані стилі
+- `title` - спливаюча підказка
+- `data-*` — атрибути користувача для зберігання даних
 
-**Пример:**
+**Приклад:**
 ```html
-<div id="container" class="main" style="color: blue;" title="Контейнер" data-info="custom">
-    Содержимое
+<div id="container" class="main" style="color: blue;" title="Контейнер" data-info="custom"> 
+Вміст
 </div>
-```
+````
 
-## Текстовые элементы
+## Текстові елементи
 
 ### Заголовки
 
-HTML предоставляет шесть уровней заголовков:
+HTML надає шість рівнів заголовків:
 
 ```html
-<h1>Заголовок первого уровня</h1>
-<h2>Заголовок второго уровня</h2>
-<h3>Заголовок третьего уровня</h3>
-<h4>Заголовок четвертого уровня</h4>
-<h5>Заголовок пятого уровня</h5>
-<h6>Заголовок шестого уровня</h6>
-```
+<h1>Заголовок першого рівня</h1>
+<h2>Заголовок другого рівня</h2>
+<h3>Заголовок третього рівня</h3>
+<h4>Заголовок четвертого рівня</h4>
+<h5>Заголовок п'ятого рівня</h5>
+<h6>Заголовок шостого рівня</h6>
+````
 
-### Параграфы и форматирование текста
+### Параграфи та форматування тексту
 
 ```html
-<p>Это параграф текста.</p>
+<p>Це пункт тексту.</p>
 
-<!-- Разрыв строки -->
-<p>Первая строка<br>Вторая строка</p>
+<!-- Розрив рядка -->
+<p>Перший рядок<br>Другий рядок</p>
 
-<!-- Горизонтальная линия -->
+<!-- Горизонтальна лінія -->
 <hr>
 
-<!-- Выделение текста -->
-<strong>Жирный текст</strong>
-<em>Курсивный текст</em>
-<mark>Выделенный текст</mark>
-<small>Мелкий текст</small>
-<del>Зачеркнутый текст</del>
-<ins>Подчеркнутый текст</ins>
-<sub>Подстрочный текст</sub>
-<sup>Надстрочный текст</sup>
+<!-- Виділення тексту -->
+<strong>Жирний текст</strong>
+<em>Курсивний текст</em>
+<mark>Виділений текст</mark>
+<small>Дрібний текст</small>
+<del>Закреслений текст</del>
+<ins>Підкреслений текст</ins>
+<sub>Підрядковий текст</sub>
+<sup>Надрядковий текст</sup>
 <code>Код</code>
-<pre>Предварительно отформатированный текст
-  с сохранением пробелов
-    и переносов строк</pre>
-```
+<pre>Попередньо відформатований текст 
+із збереженням прогалин 
+та перенесення рядків</pre>
+````
 
 ## Списки
 
-### Маркированный список (ненумерованный)
+### Маркований список (ненумерований)
 
 ```html
-<ul>
-    <li>Элемент 1</li>
-    <li>Элемент 2</li>
-    <li>Элемент 3</li>
+<ul> 
+<li>Елемент 1</li> 
+<li>Елемент 2</li> 
+<li>Елемент 3</li>
 </ul>
-```
+````
 
-### Нумерованный список
-
-```html
-<ol>
-    <li>Первый элемент</li>
-    <li>Второй элемент</li>
-    <li>Третий элемент</li>
-</ol>
-```
-
-**Атрибуты нумерованного списка:**
-```html
-<!-- Начать с определенного номера -->
-<ol start="5">
-    <li>Пятый элемент</li>
-    <li>Шестой элемент</li>
-</ol>
-
-<!-- Изменить тип нумерации -->
-<ol type="A">
-    <li>Элемент A</li>
-    <li>Элемент B</li>
-</ol>
-```
-
-### Список определений
+### Нумерований список
 
 ```html
-<dl>
-    <dt>Термин 1</dt>
-    <dd>Определение термина 1</dd>
-    <dt>Термин 2</dt>
-    <dd>Определение термина 2</dd>
+<ol> 
+<li>Перший елемент</li> 
+<li>Другий елемент</li> 
+<li>Третій елемент</li>
+</ol>
+````
+
+**Атрибути нумерованого списку:**
+```html
+<!-- Почати з певного номера -->
+<ol start="5"> 
+<li>П'ятий елемент</li> 
+<li>Шостий елемент</li>
+</ol>
+
+<!-- Змінити тип нумерації -->
+<ol type="A"> 
+<li>Елемент A</li> 
+<li>Елемент B</li>
+</ol>
+````
+
+### Список визначень
+
+```html
+<dl> 
+<dt>Термін 1</dt> 
+<dd>Визначення терміна 1</dd> 
+<dt>Термін 2</dt> 
+<dd>Визначення терміна 2</dd>
 </dl>
-```
+````
 
-### Вложенные списки
+### Вкладені списки
 
 ```html
-<ul>
-    <li>Элемент 1</li>
-    <li>Элемент 2
-        <ul>
-            <li>Вложенный элемент 2.1</li>
-            <li>Вложенный элемент 2.2</li>
-        </ul>
-    </li>
-    <li>Элемент 3</li>
+<ul> 
+<li>Елемент 1</li> 
+<li>Елемент 2 
+<ul> 
+<li>Вкладений елемент 2.1</li> 
+<li>Вкладений елемент 2.2</li> 
+</ul> 
+</li> 
+<li>Елемент 3</li>
 </ul>
-```
+````
 
-## Ссылки
+## Посилання
 
-### Базовая ссылка
-
-```html
-<a href="https://example.com">Текст ссылки</a>
-```
-
-### Дополнительные атрибуты ссылок
+### Базове посилання
 
 ```html
-<!-- Открыть в новой вкладке -->
-<a href="https://example.com" target="_blank">Открыть в новой вкладке</a>
+<a href="https://example.com">Текст посилання</a>
+````
 
-<!-- Добавить подсказку -->
-<a href="https://example.com" title="Посетить Example">Example</a>
-
-<!-- Ссылка на email -->
-<a href="mailto:example@example.com">Отправить email</a>
-
-<!-- Ссылка на телефон -->
-<a href="tel:+1234567890">Позвонить</a>
-
-<!-- Ссылка на якорь (внутри страницы) -->
-<a href="#section1">Перейти к разделу 1</a>
-
-<!-- Якорь (место назначения) -->
-<h2 id="section1">Раздел 1</h2>
-
-<!-- Скачивание файла -->
-<a href="file.pdf" download>Скачать PDF</a>
-```
-
-## Изображения
-
-### Базовое изображение
+### Додаткові атрибути посилань
 
 ```html
-<img src="image.jpg" alt="Описание изображения">
-```
+<!-- Відкрити в новій вкладці -->
+<a href="https://example.com" target="_blank">Відкрити у новій вкладці</a>
 
-### Дополнительные атрибуты изображений
+<!-- Додати підказку -->
+<a href="https://example.com" title="Відвідати Example">Example</a>
+
+<!-- Посилання на email -->
+<a href="mailto:example@example.com">Надіслати email</a>
+
+<!-- Посилання на телефон -->
+<a href="tel:+1234567890">Зателефонувати</a>
+
+<!-- Посилання на якір (всередині сторінки) -->
+<a href="#section1">Перейти до розділу 1</a>
+
+<!-- Якір (місце призначення) -->
+<h2 id="section1">Розділ 1</h2>
+
+<!-- Завантаження файлу -->
+<a href="file.pdf" download>Завантажити PDF</a>
+````
+
+## Зображення
+
+### Базове зображення
 
 ```html
-<!-- Установка размеров -->
-<img src="image.jpg" alt="Описание" width="300" height="200">
+<img src="image.jpg" alt="Опис зображення">
+````
 
-<!-- Изображение с заголовком -->
-<figure>
-    <img src="image.jpg" alt="Описание">
-    <figcaption>Подпись к изображению</figcaption>
+### Додаткові атрибути зображень
+
+```html
+<!-- Встановлення розмірів -->
+<img src="image.jpg" alt="Опис" width="300" height="200">
+
+<!-- Зображення із заголовком -->
+<figure> 
+<img src="image.jpg" alt="Опис"> 
+<figcaption>Підпис до зображення</figcaption>
 </figure>
 
-<!-- Изображение-ссылка -->
-<a href="page.html">
-    <img src="image.jpg" alt="Описание">
+<!-- Зображення-посилання -->
+<a href="page.html"> 
+<img src="image.jpg" alt="Опис">
 </a>
 
-<!-- Адаптивное изображение -->
-<picture>
-    <source media="(min-width: 650px)" srcset="img_large.jpg">
-    <source media="(min-width: 465px)" srcset="img_medium.jpg">
-    <img src="img_small.jpg" alt="Описание">
+<!-- Адаптивне зображення -->
+<picture> 
+<source media="(min-width: 650px)" srcset="img_large.jpg"> 
+<source media="(min-width: 465px)" srcset="img_medium.jpg"> 
+<img src="img_small.jpg" alt="Опис">
 </picture>
-```
+````
 
-## Таблицы
+## Таблиці
 
-### Базовая структура таблицы
+### Базова структура таблиці
 
 ```html
-<table>
-    <caption>Название таблицы</caption>
-    <thead>
-        <tr>
-            <th>Заголовок 1</th>
-            <th>Заголовок 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Ячейка 1</td>
-            <td>Ячейка 2</td>
-        </tr>
-        <tr>
-            <td>Ячейка 3</td>
-            <td>Ячейка 4</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="2">Итого</td>
-        </tr>
-    </tfoot>
+<table> 
+<caption>Назва таблиці</caption> 
+<thead> 
+<tr> 
+<th>Заголовок 1</th> 
+<th>Заголовок 2</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td>Комірка 1</td> 
+<td>Комірка 2</td> 
+</tr> 
+<tr> 
+<td>Комірка 3</td> 
+<td>Комірка 4</td> 
+</tr> 
+</tbody> 
+<tfoot> 
+<tr> 
+<td colspan="2">Разом</td> 
+</tr> 
+</tfoot>
 </table>
-```
+````
 
-### Дополнительные атрибуты таблиц
+### Додаткові атрибути таблиць
 
 ```html
-<!-- Объединение ячеек по горизонтали -->
-<td colspan="2">Объединенная ячейка</td>
+<!-- Об'єднання осередків по горизонталі -->
+<td colspan="2">Об'єднаний осередок</td>
 
-<!-- Объединение ячеек по вертикали -->
-<td rowspan="2">Объединенная ячейка</td>
+<!-- Об'єднання осередків по вертикалі -->
+<td rowspan="2">Об'єднаний осередок</td>
 
-<!-- Группировка столбцов для стилизации -->
-<table>
-    <colgroup>
-        <col style="background-color: yellow">
-        <col style="background-color: lightblue">
-    </colgroup>
-    <tr>
-        <td>Ячейка 1</td>
-        <td>Ячейка 2</td>
-    </tr>
+<!-- Угруповання стовпців для стилізації -->
+<table> 
+<colgroup> 
+<col style="background-color: yellow"> 
+<col style="background-color: lightblue"> 
+</colgroup> 
+<tr> 
+<td>Комірка 1</td> 
+<td>Комірка 2</td> 
+</tr>
 </table>
-```
+````
 
-## Формы
+## Форми
 
-### Базовая структура формы
+### Базова структура форми
 
 ```html
-<form action="/submit" method="post">
-    <label for="name">Имя:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <input type="submit" value="Отправить">
+<form action="/submit" method="post"> 
+<label for="name">Ім'я:</label> 
+<input type="text" id="name" name="name" required> 
+
+<label for="email">Email:</label> 
+<input type="email" id="email" name="email" required> 
+
+<input type="submit" value="Надіслати">
 </form>
-```
+````
 
-### Типы полей ввода
+### Типи полів введення
 
 ```html
-<!-- Текстовое поле -->
-<input type="text" name="username" placeholder="Введите имя пользователя">
+<!-- Текстове поле -->
+<input type="text" name="username" placeholder="Введіть ім'я користувача">
 
 <!-- Пароль -->
-<input type="password" name="password" placeholder="Введите пароль">
+<input type="password" name="password" placeholder="Введіть пароль">
 
 <!-- Email -->
 <input type="email" name="email" placeholder="example@domain.com">
@@ -359,349 +359,348 @@ HTML предоставляет шесть уровней заголовков:
 <!-- Число -->
 <input type="number" name="quantity" min="1" max="100" step="1" value="1">
 
-<!-- Диапазон (слайдер) -->
+<!-- Діапазон (слайдер) -->
 <input type="range" name="rating" min="1" max="10" value="5">
 
 <!-- Дата -->
 <input type="date" name="birthdate">
 
-<!-- Время -->
+<!-- Час -->
 <input type="time" name="meeting-time">
 
-<!-- Цвет -->
+<!-- Колір -->
 <input type="color" name="favorite-color" value="#ff0000">
 
-<!-- Флажок (чекбокс) -->
+<!-- Прапорець (чекбокс) -->
 <input type="checkbox" id="subscribe" name="subscribe" checked>
-<label for="subscribe">Подписаться на рассылку</label>
+<label for="subscribe">Підписатися на розсилку</label>
 
-<!-- Переключатель (радиокнопка) -->
+<!-- Перемикач (радіокнопка) -->
 <input type="radio" id="male" name="gender" value="male">
-<label for="male">Мужской</label>
+<label for="male">Чоловічий</label>
 <input type="radio" id="female" name="gender" value="female">
-<label for="female">Женский</label>
+<label for="female">Жіночий</label>
 
-<!-- Выпадающий список -->
-<label for="country">Страна:</label>
-<select id="country" name="country">
-    <option value="">Выберите страну</option>
-    <option value="ru">Россия</option>
-    <option value="us">США</option>
-    <option value="gb">Великобритания</option>
+<!-- Список, що випадає -->
+<label for="country">Країна:</label>
+<select id="country" name="country"> 
+<option value="">Виберіть країну</option> 
+<option value="ru">Росія</option> 
+<option value="us">США</option> 
+<option value="gb">Велика Британія</option>
 </select>
 
-<!-- Многострочное текстовое поле -->
-<label for="message">Сообщение:</label>
+<!-- Багаторядкове текстове поле -->
+<label for="message">Повідомлення:</label>
 <textarea id="message" name="message" rows="4" cols="50"></textarea>
 
-<!-- Загрузка файлов -->
+<!-- Завантаження файлів -->
 <input type="file" name="document" accept=".pdf,.doc,.docx">
 <input type="file" name="images" accept="image/*" multiple>
 
-<!-- Скрытое поле -->
+<!-- Приховане поле -->
 <input type="hidden" name="user_id" value="123">
 
-<!-- Кнопка отправки формы -->
-<input type="submit" value="Отправить">
+<!-- Кнопка відправки форми -->
+<input type="submit" value="Надіслати">
 
-<!-- Кнопка сброса формы -->
-<input type="reset" value="Сбросить">
+<!-- Кнопка скидання форми -->
+<input type="reset" value="Скинути">
 
-<!-- Обычная кнопка -->
-<button type="button">Нажми меня</button>
-```
+<!-- Звичайна кнопка -->
+<button type="button">Натисніть мене</button>
+````
 
-### Группировка элементов формы
+### Угруповання елементів форми
 
 ```html
-<form>
-    <fieldset>
-        <legend>Личная информация</legend>
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name">
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-    </fieldset>
-    
-    <fieldset>
-        <legend>Дополнительная информация</legend>
-        <label for="comments">Комментарии:</label>
-        <textarea id="comments" name="comments"></textarea>
-    </fieldset>
-    
-    <input type="submit" value="Отправить">
+<form> 
+<fieldset> 
+<legend>Особиста інформація</legend> 
+<label for="name">Ім'я:</label> 
+<input type="text" id="name" name="name"> 
+
+<label for="email">Email:</label> 
+<input type="email" id="email" name="email"> 
+</fieldset> 
+
+<fieldset> 
+<legend>Додаткова інформація</legend> 
+<label for="comments">Коментарі:</label> 
+<textarea id="comments" name="comments"></textarea> 
+</fieldset> 
+
+<input type="submit" value="Надіслати">
 </form>
-```
+````
 
-### Атрибуты для валидации форм
+### Атрибути для валідації форм
 
 ```html
-<!-- Обязательное поле -->
+<!-- Обов'язкове поле -->
 <input type="text" name="username" required>
 
-<!-- Шаблон (регулярное выражение) -->
+<!-- Шаблон (регулярний вираз) -->
 <input type="text" name="code" pattern="[A-Za-z]{3}-[0-9]{2}" title="Формат: XXX-00">
 
-<!-- Минимальная и максимальная длина -->
+<!-- Мінімальна та максимальна довжина -->
 <input type="text" name="username" minlength="3" maxlength="20">
 
-<!-- Отключение автозаполнения -->
+<!-- Вимкнення автозаповнення -->
 <input type="text" name="username" autocomplete="off">
 
-<!-- Автофокус при загрузке страницы -->
+<!-- Автофокус під час завантаження сторінки -->
 <input type="text" name="search" autofocus>
 
-<!-- Только для чтения -->
+<!-- Тільки для читання -->
 <input type="text" name="id" value="12345" readonly>
 
-<!-- Отключенное поле -->
+<!-- Відключене поле -->
 <input type="text" name="status" value="Неактивно" disabled>
-```
+````
 
-## Семантические элементы HTML5
+## Семантичні елементи HTML5
 
-HTML5 ввел семантические элементы, которые более четко описывают свое содержимое:
+HTML5 ввів семантичні елементи, які чіткіше описують свій вміст:
 
 ```html
-<header>Верхняя часть страницы или раздела</header>
+<header>Верхня частина сторінки або розділу</header>
 
-<nav>
-    <ul>
-        <li><a href="/">Главная</a></li>
-        <li><a href="/about">О нас</a></li>
-        <li><a href="/contact">Контакты</a></li>
-    </ul>
+<nav> 
+<ul> 
+<li><a href="/">Головна</a></li> 
+<li><a href="/about">Про нас</a></li> 
+<li><a href="/contact">Контакти</a></li> 
+</ul>
 </nav>
 
-<main>
-    <article>
-        <header>
-            <h1>Заголовок статьи</h1>
-            <p>Автор: Иван Иванов</p>
-        </header>
-        <section>
-            <h2>Раздел 1</h2>
-            <p>Содержимое раздела 1...</p>
-        </section>
-        <section>
-            <h2>Раздел 2</h2>
-            <p>Содержимое раздела 2...</p>
-        </section>
-        <footer>
-            <p>Опубликовано: 28 апреля 2025</p>
-        </footer>
-    </article>
-    
-    <aside>
-        <h3>Связанные статьи</h3>
-        <ul>
-            <li><a href="#">Статья 1</a></li>
-            <li><a href="#">Статья 2</a></li>
-        </ul>
-    </aside>
+<main> 
+<article> 
+<header> 
+<h1>Заголовок статті</h1> 
+<p>Автор: Іван Іванов</p> 
+</header> 
+<section> 
+<h2>Розділ 1</h2> 
+<p>Вміст розділу 1...</p> 
+</section> 
+<section> 
+<h2>Розділ 2</h2> 
+<p>Вміст розділу 2...</p> 
+</section> 
+<footer> 
+<p>Опубліковано: 28 квітня 2025 року</p> 
+</footer> 
+</article> 
+
+<aside> 
+<h3>Св'язані статті</h3> 
+<ul> 
+<li><a href="#">Стаття 1</a></li> 
+<li><a href="#">Стаття 2</a></li> 
+</ul> 
+</aside>
 </main>
 
-<footer>
-    <p>&copy; 2025 Моя компания. Все права защищены.</p>
+<footer> 
+<p>&copy; 2025 Моя компанія. Усі права захищені.</p>
 </footer>
-```
+````
 
-**Другие семантические элементы:**
+**Інші семантичні елементи:**
 
 ```html
-<!-- Определяет фигуру с подписью -->
-<figure>
-    <img src="image.jpg" alt="Описание">
-    <figcaption>Подпись к изображению</figcaption>
+<!-- Визначає фігуру з підписом -->
+<figure> 
+<img src="image.jpg" alt="Опис"> 
+<figcaption>Підпис до зображення</figcaption>
 </figure>
 
-<!-- Определяет время/дату -->
-<time datetime="2025-04-28">28 апреля 2025</time>
+<!-- Визначає час/дату -->
+<time datetime="2025-04-28">28 квітня 2025</time>
 
-<!-- Определяет детали, которые пользователь может открывать и закрывать -->
-<details>
-    <summary>Нажмите, чтобы показать подробности</summary>
-    <p>Дополнительная информация, которая будет показана при нажатии.</p>
+<!-- Визначає деталі, які користувач може відкривати та закривати -->
+<details> 
+<summary>Натисніть, щоб показати подробиці</summary> 
+<p>Додаткова інформація, яка буде показана при натисканні.</p>
 </details>
 
-<!-- Определяет прогресс задачи -->
+<!-- Визначає прогрес завдання -->
 <progress value="70" max="100">70%</progress>
 
-<!-- Определяет измерение в известном диапазоне -->
+<!-- Визначає вимірювання у відомому діапазоні -->
 <meter value="0.7" min="0" max="1">70%</meter>
 
-<!-- Определяет отдельную часть текста, например, выделенную цитату -->
-<blockquote cite="https://example.com/source">
-    <p>Цитируемый текст</p>
-    <footer>— <cite>Автор цитаты</cite></footer>
+<!-- Визначає окрему частину тексту, наприклад виділену цитату -->
+<blockquote cite="https://example.com/source"> 
+<p>Цитований текст</p> 
+<footer>— <cite>Автор цитати</cite></footer>
 </blockquote>
 
-<!-- Определяет короткую цитату -->
-<p>Как сказал <q cite="https://example.com/source">автор</q>, это важно.</p>
+<!-- Визначає коротку цитату -->
+<p>Як сказав <q cite="https://example.com/source">автор</q>, це важливо.</p>
 
-<!-- Определяет текст, который был удален из документа -->
-<p>Это <del datetime="2025-04-28">удаленный</del> <ins>добавленный</ins> текст.</p>
+<!-- Визначає текст, який було видалено з документа -->
+<p>Це <del datetime="2025-04-28">віддалений</del> <ins>доданий</ins> текст.</p>
 
-<!-- Определяет адрес -->
-<address>
-    <p>Иван Иванов</p>
-    <p>ул. Примерная, д. 123</p>
-    <p>Москва, Россия</p>
+<!-- Визначає адресу -->
+<address> 
+<p>Іван Іванов</p> 
+<p>вул. Орієнтовна, д. 123</p> 
+<p>Москва, Росія</p>
 </address>
-```
+````
 
-## Мультимедиа
+## Мультимедіа
 
-### Видео
+### Відео
 
 ```html
-<video width="640" height="360" controls>
-    <source src="video.mp4" type="video/mp4">
-    <source src="video.webm" type="video/webm">
-    Ваш браузер не поддерживает тег video.
+<video width="640" height="360" controls> 
+<source src="video.mp4" type="video/mp4"> 
+<source src="video.webm" type="video/webm"> 
+Ваш браузер не підтримує тег відео.
 </video>
-```
+````
 
-**Атрибуты видео:**
-- `controls` — отображает элементы управления
-- `autoplay` — автоматическое воспроизведение
-- `loop` — зацикливание
-- `muted` — без звука
-- `poster="image.jpg"` — изображение до начала воспроизведения
-- `preload="auto|metadata|none"` — предварительная загрузка
+**Атрибути відео:**
+- `controls` - відображає елементи керування
+- `autoplay` - автоматичне відтворення
+- `loop` - зациклювання
+- `muted` - без звуку
+- `poster="image.jpg"` - зображення до початку відтворення
+- `preload="auto|metadata|none"` - попереднє завантаження
 
-### Аудио
+### Аудіо
 
 ```html
-<audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    <source src="audio.ogg" type="audio/ogg">
-    Ваш браузер не поддерживает тег audio.
+<audio controls> 
+<source src="audio.mp3" type="audio/mpeg"> 
+<source src="audio.ogg" type="audio/ogg"> 
+Ваш браузер не підтримує тег audio.
 </audio>
-```
+````
 
-### Встраивание контента
+### Вбудовування контенту
 
 ```html
-<!-- Встраивание iframe (например, YouTube видео) -->
+<!-- Вбудовування iframe (наприклад, YouTube відео) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
 
-<!-- Встраивание карты Google Maps -->
-<iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- Вбудовування картки Google Maps -->
+<iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" ​​style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-<!-- Встраивание SVG -->
-<svg width="100" height="100">
-    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+<!-- Вбудовування SVG -->
+<svg width="100" height="100"> 
+<circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
 </svg>
 
-<!-- Встраивание Canvas для JavaScript графики -->
+<!-- Вбудовування Canvas для JavaScript графіки -->
 <canvas id="myCanvas" width="200" height="100"></canvas>
-```
+````
 
-## Метаданные
+## Метадані
 
-Метаданные размещаются в элементе `<head>` и предоставляют информацию о документе.
+Метадані розміщуються в елементі `<head>` та надають інформацію про документ.
 
 ```html
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <!-- Основные метаданные -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название страницы</title>
-    
-    <!-- Описание страницы (для поисковых систем) -->
-    <meta name="description" content="Описание страницы для поисковых систем">
-    <meta name="keywords" content="ключевые, слова, через, запятую">
-    <meta name="author" content="Имя автора">
-    
-    <!-- Управление индексацией поисковыми системами -->
-    <meta name="robots" content="index, follow">
-    
-    <!-- Метаданные для социальных сетей (Open Graph) -->
-    <meta property="og:title" content="Название для соцсетей">
-    <meta property="og:description" content="Описание для соцсетей">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <meta property="og:url" content="https://example.com/page">
-    <meta property="og:type" content="website">
-    
-    <!-- Метаданные для Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Название для Twitter">
-    <meta name="twitter:description" content="Описание для Twitter">
-    <meta name="twitter:image" content="https://example.com/image.jpg">
-    
-    <!-- Иконка сайта -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <!-- Подключение CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Подключение JavaScript -->
-    <script src="script.js" defer></script>
-    
-    <!-- Предварительная загрузка ресурсов -->
-    <link rel="preload" href="important-font.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preconnect" href="https://example.com">
-    
-    <!-- Альтернативные версии страницы -->
-    <link rel="alternate" hreflang="en" href="https://example.com/en/page">
-    <link rel="canonical" href="https://example.com/page">
+<head> 
+<!-- Основні метадані --> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Назва сторінки</title> 
+
+<!-- Опис сторінки (для пошукових систем) --> 
+<meta name="description" content="Опис сторінки для пошукових систем"> 
+<meta name="keywords" content="ключові, слова, через, кому"> 
+<meta name="author" content="Ім'я автора"> 
+
+<!-- Управління індексацією пошуковими системами --> 
+<meta name="robots" content="index, follow"> 
+
+<!-- Метадані для соціальних мереж (Open Graph) --> 
+<meta property="og:title" content="Назва для соціальних мереж"> 
+<meta property="og:description" content="Опис для соцмереж"> 
+<meta property="og:image" content="https://example.com/image.jpg"> 
+<meta property="og:url" content="https://example.com/page"> 
+<meta property="og:type" content="website"> 
+
+<!-- Метадані для Twitter --> 
+<meta name="twitter:card" content="summary_large_image"> 
+<meta name="twitter:title" content="Назва для Twitter"> 
+<meta name="twitter:description" content="Опис для Twitter"> 
+<meta name="twitter:image" content="https://example.com/image.jpg"> 
+
+<!-- Іконка сайту --> 
+<link rel="icon" href="favicon.ico" type="image/x-icon"> 
+<link rel="apple-touch-icon" href="apple-touch-icon.png"> 
+
+<!-- Підключення CSS --> 
+<link rel="stylesheet" href="styles.css"> 
+
+<!-- Підключення JavaScript --> 
+<script src="script.js" defer></script> 
+
+<!-- Попереднє завантаження ресурсів --> 
+<link rel="preload" href="important-font.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="preconnect" href="https://example.com"> 
+
+<!-- Альтернативні версії сторінки --> 
+<link rel="alternate" hreflang="en" href="https://example.com/en/page"> 
+<link rel="canonical" href="https://example.com/page">
 </head>
-<body>
-    <!-- Содержимое страницы -->
+<body> 
+<!-- Вміст сторінки -->
 </body>
 </html>
-```
+````
 
 ## API HTML5
 
-HTML5 предоставляет множество API для создания более интерактивных веб-приложений.
+HTML5 надає безліч API для створення більш інтерактивних веб-застосунків.
 
-### Геолокация
+### Геолокація
 
 ```html
-<button onclick="getLocation()">Определить местоположение</button>
+<button onclick="getLocation()">Визначити розташування</button>
 <p id="demo"></p>
 
 <script>
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        document.getElementById("demo").innerHTML = "Геолокация не поддерживается вашим браузером.";
-    }
+function getLocation() { 
+if (navigator.geolocation) { 
+navigator.geolocation.getCurrentPosition(showPosition); 
+} else { 
+document.getElementById("demo").innerHTML = "Геолокація не підтримується вашим браузером."; 
+}
 }
 
-function showPosition(position) {
-    document.getElementById("demo").innerHTML = 
-    "Широта: " + position.coords.latitude + 
-    "<br>Долгота: " + position.coords.longitude;
+function showPosition(position) { 
+document.getElementById("demo").innerHTML = 
+"Широта:" + position.coords.latitude + 
+<br>Довгота: + position.coords.longitude;
 }
 </script>
-```
+````
 
-### Хранение данных
+### Зберігання даних
 
 ```html
 <script>
-// localStorage - данные сохраняются даже после закрытия браузера
-localStorage.setItem("name", "Иван");
+//localStorage - дані зберігаються навіть після закриття браузера
+localStorage.setItem("name", "Іван");
 let name = localStorage.getItem("name");
 localStorage.removeItem("name");
-localStorage.clear(); // Удаляет все данные
+localStorage.clear(); // Видаляє всі дані
 
-// sessionStorage - данные удаляются при закрытии вкладки
-sessionStorage.setItem("name", "Иван");
+// sessionStorage - дані видаляються при закритті вкладки
+sessionStorage.setItem("name", "Іван");
 let sessionName = sessionStorage.getItem("name");
 sessionStorage.removeItem("name");
 sessionStorage.clear();
 </script>
-```
-
+````
 ### Drag and Drop API
 
 ```html
@@ -709,107 +708,107 @@ sessionStorage.clear();
 <img id="drag1" src="img.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
 
 <script>
-function allowDrop(ev) {
-    ev.preventDefault();
+function allowDrop(ev) { 
+ev.preventDefault();
 }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+function drag(ev) { 
+ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+function drop(ev) { 
+ev.preventDefault(); 
+var data = ev.dataTransfer.getData("text"); 
+ev.target.appendChild(document.getElementById(data));
 }
 </script>
-```
+````
 
 ### Web Workers
 
 ```html
-<p>Считаем: <output id="result"></output></p>
-<button onclick="startWorker()">Запустить Worker</button>
-<button onclick="stopWorker()">Остановить Worker</button>
+<p>Вважаємо: <output id="result"></output></p>
+<button onclick="startWorker()">Запустити Worker</button>
+<button onclick="stopWorker()">Зупинити Worker</button>
 
 <script>
 let w;
 
-function startWorker() {
-    if (typeof(Worker) !== "undefined") {
-        if (typeof(w) == "undefined") {
-            w = new Worker("worker.js");
-        }
-        w.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data;
-        };
-    } else {
-        document.getElementById("result").innerHTML = "Web Workers не поддерживаются вашим браузером";
-    }
+function startWorker() { 
+if (typeof(Worker) !== "undefined") { 
+if (typeof(w) == "undefined") { 
+w = новий Worker("worker.js"); 
+} 
+w.onmessage = function(event) { 
+document.getElementById("result").innerHTML = event.data; 
+}; 
+} else { 
+document.getElementById("result").innerHTML = "Web Workers не підтримуються вашим браузером"; 
+}
 }
 
-function stopWorker() {
-    if (w) {
-        w.terminate();
-        w = undefined;
-    }
+function stopWorker() { 
+if (w) { 
+w.terminate(); 
+w = undefined; 
+}
 }
 </script>
-```
+````
 
-Содержимое файла worker.js:
+Вміст файлу worker.js:
 ```javascript
 let i = 0;
-function timedCount() {
-    i = i + 1;
-    postMessage(i);
-    setTimeout(timedCount, 500);
+function timedCount() { 
+i = i + 1; 
+postMessage(i); 
+setTimeout(timedCount, 500);
 }
 timedCount();
-```
+````
 
-## Валидация и доступность
+## Валідація та доступність
 
-### Валидация HTML
+### Валідація HTML
 
-Всегда проверяйте валидность вашего HTML-кода с помощью [W3C Validator](https://validator.w3.org/).
+Завжди перевіряйте валідність HTML-коду за допомогою [W3C Validator](https://validator.w3.org/).
 
-### Доступность (Accessibility)
+### Доступність (Accessibility)
 
 ```html
-<!-- Используйте правильную семантику -->
-<button aria-label="Закрыть" aria-expanded="false">✕</button>
+<!-- Використовуйте правильну семантику -->
+<button aria-label="Закрити" aria-expanded="false">✕</button>
 
-<!-- Добавляйте альтернативный текст для изображений -->
-<img src="image.jpg" alt="Описание изображения">
+<!-- Додайте альтернативний текст для зображень -->
+<img src="image.jpg" alt="Опис зображення">
 
-<!-- Используйте ARIA-атрибуты для улучшения доступности -->
-<div role="alert" aria-live="assertive">Важное сообщение</div>
+<!-- Використовуйте ARIA-атрибути для покращення доступності -->
+<div role="alert" aria-live="assertive">Важливе повідомлення</div>
 
-<!-- Используйте правильную структуру заголовков -->
-<h1>Главный заголовок</h1>
-<section>
-    <h2>Подзаголовок</h2>
-    <p>Содержимое...</p>
+<!-- Використовуйте правильну структуру заголовків -->
+<h1>Головний заголовок</h1>
+<section> 
+<h2>Підзаголовок</h2> 
+<p>Вміст...</p>
 </section>
 
-<!-- Используйте правильную разметку для форм -->
-<label for="name">Имя:</label>
+<!-- Використовуйте правильну розмітку для форм -->
+<label for="name">Ім'я:</label>
 <input type="text" id="name" name="name" required aria-required="true">
 
-<!-- Используйте tabindex для управления навигацией с клавиатуры -->
-<div tabindex="0">Этот элемент можно выбрать с помощью клавиши Tab</div>
+<!-- Використовуйте tabindex для керування навігацією з клавіатури -->
+<div tabindex="0">Цей елемент можна вибрати за допомогою клавіші Tab</div>
 
-<!-- Используйте lang атрибут для указания языка -->
+<!-- Використовуйте lang атрибут для вказівки мови -->
 <p lang="en">This is English text.</p>
-<p lang="ru">Это русский текст.</p>
-```
+<p lang="ru">Це російський текст.</p>
+````
 
-### Основные принципы доступности:
+### Основні принципи доступності:
 
-1. **Воспринимаемость**: информация должна быть представлена в форме, которую пользователи могут воспринимать.
-2. **Управляемость**: компоненты интерфейса должны быть управляемыми.
-3. **Понятность**: информация и операции должны быть понятными.
-4. **Надежность**: контент должен быть достаточно надежным для интерпретации различными пользовательскими агентами.
+1. **Сприймання**: інформація має бути подана у формі, яку користувачі можуть сприймати.
+2. **Керування**: компоненти інтерфейсу повинні бути керованими.
+3. **Зрозумілість**: інформація та операції мають бути зрозумілими.
+4. **Надійність**: контент повинен бути достатньо надійним для інтерпретації різними користувачами агентами.
 
 ---
